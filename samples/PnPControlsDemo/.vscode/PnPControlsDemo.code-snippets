@@ -1,0 +1,266 @@
+{
+	// Place your pnpcntrolsdemo workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	
+		"controldemostate": {
+			"prefix": "controldemostate",
+			"body": [
+				"export interface IContentcontrolsState{\r",
+				"  filePickerResult:IFilePickerResult;\r",
+				"}"
+			],
+			"description": "controldemostate"
+		},
+		"controldemoconstructor": {
+			"prefix": "controldemoconstructor",
+			"body": [
+				"constructor (props:IContentcontrolsProps,state:IContentcontrolsState) {\r",
+				"    super(props);\r",
+				"    \r",
+				"  }"
+			],
+			"description": "controldemoconstructor"
+		},
+	
+	"importbutton": {
+        "prefix": "importbutton",
+        "body": [
+            "import { IButtonProps, PrimaryButton } from 'office-ui-fabric-react/lib/Button'; "
+        ],
+        "description": "importbutton"
+	},
+	"controldemobuttonhtml": {
+        "prefix": "controldemobuttonhtml",
+        "body": [
+            "<PrimaryButton    \r",
+            "  data-automation-id=\"submit\"    \r",
+            "  text=\"Submit\"    \r",
+            "  onClick={()=>this.submit()} />"
+        ],
+        "description": "controldemobuttonhtml"
+	},
+	"treeviewitemsobj": {
+        "prefix": "treeviewitemsobj",
+        "body": [
+            " private treeItems = [  \r",
+            "    {  \r",
+            "      key: \"R1\",  \r",
+            "      label: \"Root\",  \r",
+            "      subLabel: \"This is a sub label for node\",  \r",
+            "      iconProps: {  \r",
+            "        iconName: 'SkypeCheck'  \r",
+            "      },  \r",
+            "      actions: [{  \r",
+            "        title: \"Get item\",  \r",
+            "        iconProps: {  \r",
+            "          iconName: 'Warning',  \r",
+            "          style: {  \r",
+            "            color: 'salmon',  \r",
+            "          },  \r",
+            "        },  \r",
+            "        id: \"GetItem\",  \r",
+            "        actionCallback: async (treeItem: ITreeItem) => {  \r",
+            "          console.log(treeItem);  \r",
+            "        }  \r",
+            "      }],  \r",
+            "      children: [  \r",
+            "        {  \r",
+            "          key: \"1\",  \r",
+            "          label: \"Parent 1\",  \r",
+            "          selectable: false,  \r",
+            "          children: [  \r",
+            "            {  \r",
+            "              key: \"3\",  \r",
+            "              label: \"Child 1\",  \r",
+            "              subLabel: \"This is a sub label for node\",  \r",
+            "              actions: [{  \r",
+            "                title: \"Share\",  \r",
+            "                iconProps: {  \r",
+            "                  iconName: 'Share'  \r",
+            "                },  \r",
+            "                id: \"GetItem\",                  \r",
+            "                actionCallback: async (treeItem: ITreeItem) => {  \r",
+            "                  console.log(treeItem);  \r",
+            "                }  \r",
+            "              }],  \r",
+            "              children: [  \r",
+            "                {  \r",
+            "                  key: \"gc1\",  \r",
+            "                  label: \"Grand Child 1\",  \r",
+            "                  actions: [{  \r",
+            "                    title: \"Get Grand Child item\",  \r",
+            "                    iconProps: {  \r",
+            "                      iconName: 'Mail'  \r",
+            "                    },  \r",
+            "                    id: \"GetItem\",  \r",
+            "                    actionCallback: async (treeItem: ITreeItem) => {  \r",
+            "                      console.log(treeItem);  \r",
+            "                    }  \r",
+            "                  }]  \r",
+            "                }  \r",
+            "              ]  \r",
+            "            },  \r",
+            "            {  \r",
+            "              key: \"4\",  \r",
+            "              label: \"Child 2\",  \r",
+            "              iconProps: {  \r",
+            "                iconName: 'SkypeCheck'  \r",
+            "              }  \r",
+            "            }  \r",
+            "          ]  \r",
+            "        },  \r",
+            "        {  \r",
+            "          key: \"2\",  \r",
+            "          label: \"Parent 2\"  \r",
+            "        },  \r",
+            "        {  \r",
+            "          key: \"5\",  \r",
+            "          label: \"Parent 3\",  \r",
+            "          disabled: true  \r",
+            "        },  \r",
+            "        {  \r",
+            "          key: \"6\",  \r",
+            "          label: \"Parent 4\",  \r",
+            "          selectable: true  \r",
+            "        }  \r",
+            "      ]  \r",
+            "    },  \r",
+            "    {  \r",
+            "      key: \"R2\",  \r",
+            "      label: \"Root 2\",  \r",
+            "      children: [  \r",
+            "        {  \r",
+            "          key: \"8\",  \r",
+            "          label: \"Parent 5\"  \r",
+            "        }  \r",
+            "      ]  \r",
+            "    }  \r",
+            "  ];"
+        ],
+        "description": "treeviewitemsobj"
+	},
+	"listviewgetitems": {
+        "prefix": "listviewgetitems",
+        "body": [
+            " private async _getItems() {\r",
+            "    let select = '*';\r",
+            "    let expand = 'File';\r",
+            "    let filter = '';\r",
+            "\r",
+            "    var listID:string = this.props.lists.toString();\r",
+            "   const items = await sp.web.lists.getById(listID).items\r",
+            "      .select(select)\r",
+            "      .expand(expand)\r",
+            "      .filter(filter)\r",
+            "      .get();\r",
+            "\r",
+            "    // update state\r",
+            "    this.setState({\r",
+            "      items: items ? items : []\r",
+            "    });\r",
+            "    console.log('List Items:', this.state.items);\r",
+            "  }"
+        ],
+        "description": "listviewgetitems"
+	},
+	"listviewdemostate": {
+        "prefix": "listviewdemostate",
+        "body": [
+            "export interface IListviewdemoState {\r",
+            "  items:any[];\r",
+            "  lists:string |string[];\r",
+            "}"
+        ],
+        "description": "listviewdemostate"
+	},
+	
+    "listviewconstructor": {
+        "prefix": "listviewconstructor",
+        "body": [
+            "constructor(props: IListviewdemoProps,state:IListviewdemoState) {\r",
+            "    super(props);\r",
+            "    this.state = { items:[],lists:this.props.lists};\r",
+            "}"
+        ],
+        "description": "listviewconstructor"
+	},
+	"listviewfieldsvariable": {
+        "prefix": "listviewfieldsvariable",
+        "body": [
+            "private viewFields: IViewField[] = [\r",
+            "  {\r",
+            "    name: \"Id\",\r",
+            "    displayName: \"ID\",\r",
+            "    maxWidth: 25,\r",
+            "    minWidth: 25,\r",
+            "    sorting: true\r",
+            "  },\r",
+            "  {\r",
+            "    name: \"File.Name\",\r",
+            "    linkPropertyName: \"File.ServerRelativeUrl\",\r",
+            "    displayName: \"Name\",\r",
+            "    sorting: true,\r",
+            "    render: (item: any) => {\r",
+            "      if(item[\"File.Name\"] == \"\" || item[\"File.Name\"] == undefined)\r",
+            "      {\r",
+            "        return item[\"Title\"];\r",
+            "        //<a href={item['File.ServerRelativeUrl']}>{item['File.Name']}</a>;\r",
+            "      }\r",
+            "      else{\r",
+            "        return  <a href={item['File.ServerRelativeUrl']}>{item['File.Name']}</a>;\r",
+            "      }\r",
+            "    }\r",
+            "  }\r",
+            "];"
+        ],
+        "description": "listviewfieldsvariable"
+	},
+	"listviewmount": {
+        "prefix": "listviewmount",
+        "body": [
+            "public componentDidMount() {\r",
+            "  if (this.props.lists !== null && this.props.lists !== \"\" && this.props.lists !== undefined) {\r",
+            "    this._getItems();\r",
+            "  }\r",
+            "}"
+        ],
+        "description": "listviewmount"
+	},
+	"listviewcompupdate": {
+        "prefix": "listviewcompupdate",
+        "body": [
+            "public componentDidUpdate(prevProps, prevState) {\r",
+            "  //If statement checking if your property or state has changed.\r",
+            "  //Re run API call\r",
+            "  if(prevProps.lists != this.props.lists) \r",
+            "  {\r",
+            "    this._getItems();\r",
+            "  }\r",
+            "}"
+        ],
+        "description": "listviewcompupdate"
+	},
+	"importsp": {
+        "prefix": "importsp",
+        "body": [
+            "import { sp } from \"@pnp/sp\";"
+        ],
+        "description": ""
+    }
+	
+}

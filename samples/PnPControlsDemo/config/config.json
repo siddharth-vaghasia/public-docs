@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "contentcontrols-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/contentcontrols/ContentcontrolsWebPart.js",
+          "manifest": "./src/webparts/contentcontrols/ContentcontrolsWebPart.manifest.json"
+        }
+      ]
+    },
+    "propertypanes-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/propertypanes/PropertypanesWebPart.js",
+          "manifest": "./src/webparts/propertypanes/PropertypanesWebPart.manifest.json"
+        }
+      ]
+    },
+    "listviewdemo-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/listviewdemo/ListviewdemoWebPart.js",
+          "manifest": "./src/webparts/listviewdemo/ListviewdemoWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "ContentcontrolsWebPartStrings": "lib/webparts/contentcontrols/loc/{locale}.js",
+    "PropertypanesWebPartStrings": "lib/webparts/propertypanes/loc/{locale}.js",
+    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js",
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js",
+    "ListviewdemoWebPartStrings": "lib/webparts/listviewdemo/loc/{locale}.js"
+  }
+}
